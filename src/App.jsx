@@ -1,8 +1,15 @@
+import ClassesContainer from "./components/ClassesContainer";
+import Navbar from "./components/Navbar";
+import StudentProfileContainer from "./components/StudentProfileContainer";
+import '../src/App.scss';
 
 function App() {
   return (
-    <div>
-      <h1>Student Dashboard</h1>
+    <div className="app-container">
+      <Navbar/>
+      <ClassesContainer/>
+      <StudentProfileContainer/>
+
     </div>
   );
 }
