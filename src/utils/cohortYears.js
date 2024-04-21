@@ -17,24 +17,30 @@ export function extractCohortPairs(data) {
     return cohortEntries;
 }
 
+function sortSeasonsAndYears(entries) {
+    
+    const seasonOrder = {
+        'Winter': 1, 'Fall': 2, 'Summer': 3, 'Spring': 4
+    };
 
-export function sortCohortPairs(cohortEntries) {
-
-    const seasonOrder = ['Fall', 'Winter', 'Spring', 'Summer'];
-
-    return cohortEntries.sort((a, b) => {
+    return entries.sort((a, b) => {
         const [seasonA, yearA] = a.split(' ');
         const [seasonB, yearB] = b.split(' ');
 
-        const yearComparison = yearA - yearB;
-        if (yearComparison !== 0) return yearComparison;
+        const yearDiff = parseInt(yearB) - parseInt(yearA);
+        if (yearDiff !== 0) {
+            return yearDiff;
+        }
 
-        return seasonOrder.indexOf(seasonA) - seasonOrder.indexOf(seasonB);
+        return seasonOrder[seasonA] - seasonOrder[seasonB];
     });
 }
 
 
+
+
 export function extractAndSortYearSeason(data) {
     const seasonYearObj = extractCohortPairs(data);
-    return sortCohortPairs(seasonYearObj);
+    return sortSeasonsAndYears(seasonYearObj);
+   
 } 

@@ -1,10 +1,10 @@
 import React from 'react'
 import './classescontainer.scss';
 
-const ClassHeader = ({value}) => {
+const ClassYear = ({value}) => {
   return (
     <div className="classes-container__class-year" >{value}</div>
   )
 }
 
-export default ClassHeader
+export default ClassYear
