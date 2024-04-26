@@ -1,0 +1,27 @@
+@import "./../../App.scss";
+
+.container {
+    width: 95%;
+
+    &__student-list {
+        margin-top: 5%;
+        list-style: none;
+
+    }
+    &__count {
+        font-size: 1em;
+        margin: 0;
+        font-weight: 100;
+        
+    }
+
+    &__number {
+        color: $primary;
+    }
+
+    &__title {
+        margin: .67em 0 0;
+        font-size: 1.5em; 
+    }
+}
+

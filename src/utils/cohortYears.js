@@ -41,6 +41,6 @@ function sortSeasonsAndYears(entries) {
 
 export function extractAndSortYearSeason(data) {
     const seasonYearObj = extractCohortPairs(data);
-    return sortSeasonsAndYears(seasonYearObj);
+    return ['All Students', ...sortSeasonsAndYears(seasonYearObj)];
    
 } 

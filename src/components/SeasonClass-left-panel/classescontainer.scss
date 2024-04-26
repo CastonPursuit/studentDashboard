@@ -1,18 +1,20 @@
-@import '../App.scss';
+@import './../../App.scss';
 
 
 .classes-container {
-    background-color: blanchedalmond;
+    background-color:white;
     grid-column: 1/2;
     grid-row: 2/3;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: auto;
 
     &__header {
 
         font-weight: bold;
         padding-top: 20px;
+        position: sticky;
       
     }
 
