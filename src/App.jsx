@@ -21,6 +21,7 @@ function App() {
       />
       <StudentProfileContainer
         studentData={currentData}
+        year={year}
       />
 
     </div>
