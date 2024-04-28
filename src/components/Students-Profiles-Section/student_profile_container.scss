@@ -2,6 +2,21 @@
 
 .container {
     width: 95%;
+    overflow-y: auto;
+    padding: 2%;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $primary;
+        border-radius: 4px;
+    }
+    &::-webkit-scrollbar-track {
+        border-radius: 4px;
+    }
+
 
     &__student-list {
         margin-top: 5%;

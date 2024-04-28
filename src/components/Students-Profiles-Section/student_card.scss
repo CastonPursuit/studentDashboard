@@ -1,12 +1,13 @@
 @import "./../../App.scss";
 
 .student-card {
-  border: 1px solid green;
+  border: 2px solid green;
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: 20px;
   padding: 2%;
+  margin-top: 2%;
 
   &__image {
     width: 100px;

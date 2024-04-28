@@ -1,0 +1,29 @@
+@import './../../App.scss';
+
+
+.expanded-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 2%;
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        margin-bottom: 2%;
+        
+    }
+
+    &__detail {
+        margin-top: 5%;
+        color: $primary;
+        font-size: 15px;
+        
+    }
+
+    &__data {
+        color: black;
+    }
+
+
+}

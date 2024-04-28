@@ -14,8 +14,8 @@
       "goal": { "total": 850, "lastWeek": 75 }
     },
     "certifications": {
-      "resume": false,
-      "linkedin": false,
+      "resume": true,
+      "linkedin": true,
       "github": false,
       "mockInterview": false
     },
