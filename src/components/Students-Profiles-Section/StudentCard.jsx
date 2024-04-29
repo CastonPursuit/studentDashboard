@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './student_card.scss';
 import ExpandedCard from './ExpandedCard';
+import Form from './Form';
 
 const StudentCard = ({student}) => {
   const {username, dob, profilePhoto, cohort, certifications, codewars } = student;
@@ -22,7 +23,10 @@ const StudentCard = ({student}) => {
 
       <button onClick={expansionToggle} className='student-card__button'>{isExpanded ? 'Show less...': 'Show more...'}</button>
       {isExpanded &&
-       ( <ExpandedCard
+       ( 
+       
+       <> 
+       <ExpandedCard
 
         assignments={cohort.scores.assignments}
         assessments={cohort.scores.assessments}
@@ -34,7 +38,10 @@ const StudentCard = ({student}) => {
         linkedin={certifications.linkedin}
         github={certifications.github}
         mockInterview={certifications.mockInterview}
-       />)
+       />
+       <Form/>
+     </>
+      )
        
        }
     </div>

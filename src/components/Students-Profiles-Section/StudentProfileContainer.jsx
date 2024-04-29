@@ -4,7 +4,7 @@ import './student_profile_container.scss'
 
 
 const StudentProfileContainer = ({studentData, year}) => {
-  console.log(year)
+  
   return ( 
   <section className="container"> 
     <header className="container__header"> 
