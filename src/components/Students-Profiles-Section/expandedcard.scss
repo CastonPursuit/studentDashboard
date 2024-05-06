@@ -36,6 +36,14 @@
         white-space: nowrap;
     }
 
+    &__form-group input{
+        padding-left: 5px;
+    }
+
+    &__form-group textarea {
+        padding-left: 5px;
+    }
+
     &__section--form{
         margin-top: 5%;
         width: 100%;
@@ -47,6 +55,7 @@
         margin-bottom: 5%;
     }
 
+
 }
 
 #commentText, #commenterName {
@@ -54,10 +63,59 @@
 }
 
 
+.comment-list {
+    margin-top: 5%;
+    list-style: none;
+
+}
+
+.comment-list li {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: fit-content;
+    border: 2px solid $primary;
+    margin-top: 2%;
+}
+
+
+
 button {
-    background-color: $primary;
-    color: white;
-    padding: 5px;
-    border: none;
-    border-radius: .5em;
+  font-size: 10px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin-top: 5%;
+  padding: 10px 15px 10px;
+  outline: 0;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:after {
+  content: "";
+  background-color: $primary;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+button:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 13px 50px 13px;
+  }
 }

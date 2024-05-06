@@ -9,10 +9,14 @@ const ClassYear = ({value, setYear, setCurrentData, studentData }) => {
     updateData();
   }
   const updateData = () => { 
-    const newVal  = value.split(' ').join('');
-    const newData = studentData.filter(info => info.cohort.cohortCode === newVal);
-    setCurrentData(newData);
-    
+    if(value === "All Students") {
+      setCurrentData(studentData);
+    }
+    else { 
+      const newVal  = value.split(' ').join('');
+      const newData = studentData.filter(info => info.cohort.cohortCode === newVal);
+      setCurrentData(newData);
+    }
   }
 
   return (
